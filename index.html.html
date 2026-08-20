@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Te amo, Darcy</title>
+<meta name="description" content="Una página hecha para Darcy Tello.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<canvas id="hearts-bg" aria-hidden="true"></canvas>
+
+<header class="hero">
+  <div class="hero-inner">
+    <span class="eyebrow">para Darcy Tello</span>
+    <h1 class="hero-title">Te amo, <span class="script">Darcy</span></h1>
+    <p class="hero-sub">Esto no es solo una página. Es un lugar hecho para decirte, con calma,<br class="br-desktop"> todo lo que normalmente se me queda entre el pecho y las palabras.</p>
+    <button class="scroll-cue" id="scrollCue" aria-label="Bajar a las razones">
+      <span class="scroll-cue-line"></span>
+      <span class="scroll-cue-text">sigue bajando</span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="reasons" id="reasons">
+    <div class="section-head">
+      <span class="eyebrow eyebrow--dark">motivos, no todos</span>
+      <h2 class="section-title">Cinco cosas que amo de ti</h2>
+      <p class="section-sub">Podrían ser cien. Hoy elegí estas cinco.</p>
+    </div>
+
+    <div class="cards">
+
+      <article class="card">
+        <div class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><path d="M12 20c0 8 5.4 14 12 14s12-6 12-14" /><circle cx="16.5" cy="16.5" r="1.6" fill="currentColor" stroke="none"/><circle cx="31.5" cy="16.5" r="1.6" fill="currentColor" stroke="none"/></svg>
+        </div>
+        <h3>Tu sonrisa</h3>
+        <p>Tiene ese poder raro de arreglar un día entero sin que se lo pida. Es lo primero que busco cuando algo sale mal.</p>
+      </article>
+
+      <article class="card">
+        <div class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="8"/><path d="M24 4v6M24 38v6M44 24h-6M10 24H4M37.3 10.7l-4.2 4.2M14.9 33.1l-4.2 4.2M37.3 37.3l-4.2-4.2M14.9 14.9l-4.2-4.2"/></svg>
+        </div>
+        <h3>Tu forma de ver la vida</h3>
+        <p>Encuentras luz donde yo solo veía ruido. Contigo cerca hasta lo complicado empieza a parecer manejable.</p>
+      </article>
+
+      <article class="card">
+        <div class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><path d="M24 4 8 11v11c0 10 7 17.5 16 22 9-4.5 16-12 16-22V11L24 4Z"/></svg>
+        </div>
+        <h3>Tu fuerza</h3>
+        <p>Sostienes más de lo que aparentas y casi nunca pides ayuda. Yo solo quiero ser parte de lo que te hace más liviano.</p>
+      </article>
+
+      <article class="card">
+        <div class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><path d="M24 6l4.3 12.9L41 23l-12.7 4.1L24 40l-4.3-12.9L7 23l12.7-4.1L24 6Z"/></svg>
+        </div>
+        <h3>Tu cuidado por los detalles</h3>
+        <p>Te acuerdas de cosas pequeñas que yo apenas mencioné una vez. Así se nota el cariño: en lo que nadie más notaría.</p>
+      </article>
+
+      <article class="card">
+        <div class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><path d="M8 22 24 8l16 14v16a2 2 0 0 1-2 2h-8v-12h-12v12h-8a2 2 0 0 1-2-2V22Z"/></svg>
+        </div>
+        <h3>Cómo conviertes cualquier lugar en un hogar</h3>
+        <p>No importa dónde estemos: contigo ahí, ese lugar se siente como el sitio al que quiero volver.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="messages" id="messages">
+    <div class="section-head">
+      <span class="eyebrow eyebrow--dark">para cuando haga falta</span>
+      <h2 class="section-title">Un corazón para cada momento</h2>
+      <p class="section-sub">Presiona el que sientas hoy. Ábrelo cuando lo necesites.</p>
+    </div>
+
+    <div class="buttons-grid" id="buttonsGrid">
+      <button class="msg-btn" data-key="duda">Cuando dudes de ti</button>
+      <button class="msg-btn" data-key="lejos">Cuando estemos lejos</button>
+      <button class="msg-btn" data-key="sonrie">Cuando sonrías</button>
+      <button class="msg-btn" data-key="malDia">En un mal día</button>
+      <button class="msg-btn" data-key="futuro">Sobre nuestro futuro</button>
+      <button class="msg-btn" data-key="hoy">Solo por hoy</button>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>Hecho con lo que se siente y no siempre se dice.</p>
+  <p class="footer-sign">— para Darcy</p>
+</footer>
+
+<div class="overlay" id="overlay">
+  <div class="heart-card" id="heartCard" role="dialog" aria-modal="true" aria-labelledby="heartMessage">
+    <button class="close-btn" id="closeBtn" aria-label="Cerrar mensaje">×</button>
+    <div class="heart-shape" id="heartShape">
+      <svg viewBox="0 0 100 90" class="heart-svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="heartGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" class="grad-start"/>
+            <stop offset="100%" class="grad-end"/>
+          </linearGradient>
+        </defs>
+        <path d="M50 88 C15 65 0 45 0 28 C0 10 18 0 32 0 C42 0 50 8 50 18 C50 8 58 0 68 0 C82 0 100 10 100 28 C100 45 85 65 50 88 Z" fill="url(#heartGrad)"/>
+      </svg>
+      <p class="heart-message" id="heartMessage"></p>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
